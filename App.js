@@ -1,10 +1,3 @@
-/*
-Inspiration: https://dribbble.com/shots/3894781-Urbanears-Headphones
-Twitter: http://twitter.com/mironcatalin
-GitHub: http://github.com/catalinmiron
-Video Tutorial: https://youtu.be/cGTD4yYgEHc
-*/
-
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import {
@@ -21,7 +14,7 @@ const { width, height } = Dimensions.get('window');
 const LOGO_WIDTH = 220;
 const LOGO_HEIGHT = 40;
 const DOT_SIZE = 40;
-const TICKER_HEIGHT = 40;
+const TICKER_HEIGHT = 28;
 const CIRCLE_SIZE = width * 0.6;
 
 const Circle = ({ scrollX }) => {
@@ -161,7 +154,6 @@ const Pagination = ({ scrollX }) => {
           styles.paginationIndicator,
           {
             position: 'absolute',
-            // backgroundColor: 'red',
             transform: [{ translateX }],
           },
         ]}
@@ -203,7 +195,7 @@ export default function App() {
       />
       <Image
         style={styles.logo}
-        source={require('./assets/ue_black_logo.png')}
+        source={require('./assets/logo_black.png')}
       />
       <Pagination scrollX={scrollX} />
       <Ticker scrollX={scrollX} />
